@@ -21,7 +21,8 @@ export default function AlertLogs() {
           </tr>
         </thead>
         <tbody>
-          {alerts.map((a) => (
+        {(Array.isArray(alerts) ? alerts : []).map((a) => (
+
             <tr key={a.id} className="bg-slate-800/70 hover:bg-slate-700/70 transition rounded-lg">
               <td className="py-2 px-4">{a.id}</td>
               <td className="py-2 px-4 text-gray-400">{a.message}</td>

@@ -33,8 +33,9 @@ export default function ClientView() {
     </h2>
 
     <div className="space-y-4">
-      {alerts.length > 0 ? (
-        alerts.map((a) => (
+    {Array.isArray(alerts) && alerts.length > 0 ? (
+  alerts.map((a) => (
+
           <div
             key={a.id}
             className="p-4 bg-gradient-to-r from-rose-500/10 to-amber-400/10 border border-rose-400/20 rounded-xl shadow-lg hover:shadow-rose-500/20 transition transform hover:scale-[1.02]"
