@@ -5,7 +5,7 @@ export default function ClientView() {
   const [timer, setTimer] = useState(5);
 
   const fetchAlerts = async () => {
-    const res = await fetch("https://cnta-production.up.railway.app/alerts");
+    const res = await fetch("https://cn-ta.onrender.com/alerts");
     const data = await res.json();
     setAlerts(data);
   };
