@@ -4,7 +4,7 @@ export default function AlertLogs() {
   const [alerts, setAlerts] = useState([]);
 
   useEffect(() => {
-    fetch("https://cnta-production.up.railway.app")
+    fetch("https://cnta-production.up.railway.app/alerts")
       .then((res) => res.json())
       .then(setAlerts);
   }, []);
